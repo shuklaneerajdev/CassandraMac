@@ -1,0 +1,10 @@
+services:
+  cassandra:
+    image: cassandra:3.11
+    ulimits:
+        memlock: -1
+    ports:
+      - "9160:9160"
+      - "9042:9042"
+    volumes:
+    - ./cassandra.yaml:/etc/cassandra/cassandra.yaml
